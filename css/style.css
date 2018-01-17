@@ -348,7 +348,7 @@ p.section-intro {
 .about-item a.about-item_link .about-item_link-title {
     position: absolute;
     top: 50%;
-    left: 40%;
+    left: 35%;
     font-size: 18px;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
@@ -406,7 +406,8 @@ p.section-intro {
 .statistics-row .statistics-item .category {
     display: inline-block;
     font-size: 14px;
-    line-height: 14px;
+    line-height: 16px;
+    letter-spacing: 1px;
     text-transform: uppercase;
     color: #fff;
 }
@@ -426,6 +427,7 @@ p.section-intro {
 .tools-row .tool-item {
     float: left;
     width: 33.3%;
+    box-sizing: border-box;
 }
 
 .tools-row .tool-item .tool-item-content {
@@ -438,7 +440,7 @@ p.section-intro {
     content: "";
     position: absolute;
     display: inline-block;
-    left: -20%;
+    left: -15%;
     width: 32px;
     height: 32px;
 }
@@ -739,10 +741,6 @@ p.section-intro {
 .partners {
     width: 100%;
     background-color: #f8f8f8;
-}
-
-.partners .positioner {
-    padding: 65px 0;
 }
 
 .partners .partners-row {
@@ -1107,7 +1105,7 @@ p.section-intro {
 }
 
 .footer-social .social-icons {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     padding-top: 16px;
 }
 
@@ -1187,7 +1185,7 @@ p.section-intro {
 
 .footer-second-column .footer-teaser {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .footer-teaser .teaser-img-wrapper {
@@ -1228,7 +1226,7 @@ p.section-intro {
 
 .footer-third-column .instagram-posts {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .instagram-posts .instagram-post {
@@ -1267,21 +1265,45 @@ p.section-intro {
 }
 
 /**
- * Styles for 1024x768 resolution.
+ * Styles for 1280x768 resolution.
  */
 
 @media only screen
 and (min-width: 768px)
 and (max-width: 1280px) {
 
+    /* common styles*/
+    .positioner {
+        padding: 80px 10px;
+    }
+
+    .section-title-desc {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .section-title {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    p.section-intro {
+        font-size: 18px;
+    }
+
     .slider .slide:before {
         left: 30px;
     }
 
     .slider .slide .slide-content .slide-text {
-        width: 95%;
+        margin-left: 15px;
     }
 
+    .slide-content .slide-author-underline {
+        margin-left: 15px;
+    }
+
+    /* styles for header*/
     .header .header-top .header-logo {
         margin-left: 35px;
     }
@@ -1302,44 +1324,220 @@ and (max-width: 1280px) {
         margin-left: 30px;
     }
 
+    .header-content .section-title-desc {
+        font-size: 62px;
+    }
+
     .header-content .section-title {
         font-size: 120px;
     }
 
+    /* styles for section about*/
+    .about-item a.about-item_link:after {
+        top: 30%;
+    }
+
+    .about-item a.about-item_link .about-item_link-title {
+        left: 30%;
+        font-size: 16px;
+    }
+
+    /*styles for section tools*/
+    .tools-row .tool-item .tool-item-content:before {
+        left: -22%;
+    }
+
+    .tools-row .tool-item .tool-item-content .tool-text {
+        font-size: 14px;
+    }
+
+    /*styles for section design*/
     .design .design-demo img#demo-back {
-        right: 230px;
+        top: -29px;
+        right: 190px;
     }
 
     .design .design-demo img#demo-front {
-        right: 120px;
+        top: 215px;
+        right: 80px;
     }
 
+    /*styles for section service*/
     .service-features .service-photo {
         width: 50%;
         margin-right: 0;
+        padding-right: 10px;
+        box-sizing: border-box;
     }
 
     .service-features .service-photo img {
         height: 378px;
     }
 
-    .footer .footer-top .footer-first-column {
-        width: 42%;
+    /*styles for section team*/
+    .team-member .member-info .member-name {
+        font-size: 20px;
+    }
+
+    .team-member .member-info .member-duty {
+        font-size: 18px;
+    }
+
+    /*styles for section projects*/
+    .project-item a.project-item_link:before {
+        top: 30%;
+        left: 42%;
+    }
+
+    .project-item a.project-item_link .project-feature {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .project-item a.project-item_link .project-text {
+        padding-top: 0;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    /*styles for section clients-reviews*/
+    .clients-reviews-row .review-item {
+        padding: 50px 5px;
+    }
+
+    .review-item .client-info {
+        width: 65%;
+        padding-left: 35px;
+        box-sizing: border-box;
+    }
+
+    .review-item .client-info .client-name {
+        font-size: 18px;
+    }
+
+    .review-item .client-info .client-duty {
+        font-size: 17px;
+    }
+
+    /*styles for section blog*/
+    .blog-posts .post .post-image-wrapper:before {
+        left: -7px;
+    }
+
+    .blog-posts .post .post-content .post-title {
+        font-size: 13px;
+    }
+
+    .blog-posts .post .post-content .post-teaser {
+        padding-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .blog-posts .post .post-data {
+        padding-top: 10px;
+    }
+
+    /*styles for section footer*/
+    .footer .positioner {
+        padding: 50px 10px 20px 10px;
+    }
+
+    .footer-top .footer-first-column {
+        width: 40%;
         padding-right: 15px;
     }
 
-    .footer .footer-top .footer-second-column {
-        width: 30%;
+    .footer-first-column .footer-logo {
+        margin-bottom: 10px;
     }
 
-    .footer-second-column .footer-teaser .teaser-content {
-        width: 54%;
+    .footer-first-column .footer-about {
+        margin-bottom: 25px;
+    }
+
+    .footer-about .footer-about-text {
+        font-size: 12px;
+    }
+
+    .footer-first-column .footer-subscription input#subscription-field {
+        margin-bottom: 5px;
+    }
+
+    .footer-first-column .footer-subscription .btn.btn-submit {
+        width: 230px;
+        margin-left: 0;
+    }
+
+    .footer-top .footer-second-column {
+        width: 29%;
         padding-left: 10px;
-        word-break: break-all;
+        box-sizing: border-box;
     }
 
-    .footer .footer-top .footer-third-column {
-        width: 28%;
-        padding-left: 3px;
+    .footer-second-column .footer-teaser {
+        margin-bottom: 20px;
+    }
+
+    .footer-teaser .teaser-img-wrapper {
+        margin-bottom: 5px;
+        width: 50%;
+    }
+
+    .footer-teaser .teaser-content {
+        width: 50%;
+    }
+
+    .footer-teaser .teaser-content .teaser-title {
+        font-size: 10px;
+        line-height: 20px;
+    }
+
+    .footer-top .footer-third-column {
+        width: 31%;
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+
+    .footer-bottom .copyright {
+        font-size: 12px;
+    }
+}
+
+/**
+ * Styles for 320x767 resolution.
+*/
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 767px) {
+
+    /* common styles*/
+    .positioner {
+        padding: 50px 0;
+    }
+
+    .section-title-desc {
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .section-title {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .section-underline {
+        width: 80px;
+        border-top: 5px solid #f38181;
+    }
+
+    p.section-intro {
+        padding: 0 10px;
+        font-size: 11px;
+    }
+
+    /* styles for section about*/
+    .about-items .about-item {
+        width: 100%;
+        margin-right: 0;
     }
 }
